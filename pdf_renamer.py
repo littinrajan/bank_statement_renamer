@@ -15,6 +15,18 @@ def get_file():
         file.close()
         print(f"Filename: {file_name}")
         format_filename(file.name)
+ 
+#function to get directory 
+def get_directory():
+    directory = fd.askdirectory()
+    if directory:
+        print(f"Directory: {directory}")
+        for file_name in os.listdir(directory):
+            file_path = os.path.join(directory, file_name)
+            # checking if it is a file
+            if os.path.isfile(file_path):
+                print(f"Filename: {file_name}")
+                format_filename(file_path)
 
 def date_time_formatter(ip_date):
     # convert extracted date to datetime format

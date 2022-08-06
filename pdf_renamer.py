@@ -12,4 +12,6 @@ def read_pdf(pdf_path):
     total_pages = pdf_reader.numPages
     # extracting pdf data
     pdf_data = "\n\n".join([pdf_reader.getPage(i).extractText() for i in range(total_pages)])
+    # closing file object
+    pdf_obj.close()
     return pdf_data

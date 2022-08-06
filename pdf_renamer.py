@@ -4,6 +4,13 @@ import os
 from PyPDF2 import PdfFileReader
 from datetime import datetime
 
+def date_time_formatter(ip_date):
+    # convert extracted date to datetime format
+    datetime_date = datetime.strptime(ip_date, '%d %b %Y')
+    # format the date to ddmmyyyy
+    formated_date = datetime_date.strftime('%d%m%Y')
+    return formated_date
+
 def read_pdf(pdf_path):
     # reading pdffile
     pdf_obj = open(pdf_path, 'rb')
@@ -16,7 +23,6 @@ def read_pdf(pdf_path):
     # closing file object
     pdf_obj.close()
     return pdf_data
-    
     
 def format_filename(pdf_path):
     # checking file existence as well as extension

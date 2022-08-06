@@ -1,6 +1,7 @@
 #import required libraries
 import re
 import os
+from PyPDF2 import PdfFileReader
 from datetime import datetime
 
 def read_pdf(pdf_path):

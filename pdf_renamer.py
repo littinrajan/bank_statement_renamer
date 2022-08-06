@@ -72,9 +72,11 @@ root = Tk()
 file_btn = Button(root, text="Rename a File", fg='blue', command=get_file)
 file_btn.place(x=110, y=100)
 
+#adding button for directory picker
 dir_btn = Button(root, text="Choose Directory", fg='green', command=get_directory)
 dir_btn.place(x=100, y=150)
 
+#setting title and dimension of application window
 root.title('File Renamer')
 root.geometry("300x300")
 root.mainloop()

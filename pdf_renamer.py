@@ -7,6 +7,15 @@ from pathlib import Path
 from tkinter import *
 from tkinter import filedialog as fd
 
+#function to get file
+def get_file():
+    file = fd.askopenfile()
+    if file:
+        file_name = file.name
+        file.close()
+        print(f"Filename: {file_name}")
+        format_filename(file.name)
+
 def date_time_formatter(ip_date):
     # convert extracted date to datetime format
     datetime_date = datetime.strptime(ip_date, '%d %b %Y')

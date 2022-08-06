@@ -64,9 +64,11 @@ def format_filename(pdf_path):
                     print('> Error while renaming')
             except:
                 print('> Error while renaming')
-                
+
+#creating root window               
 root = Tk()
 
+#adding button for file picker
 file_btn = Button(root, text="Rename a File", fg='blue', command=get_file)
 file_btn.place(x=110, y=100)
 
